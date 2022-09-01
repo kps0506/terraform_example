@@ -25,7 +25,7 @@ resource "aws_security_group" "instance" {
         from_port   = 8080
         to_port     = 8080
         protocol    = "tcp"
-        cidr_blocks = ["203.247.171.161/32"]
+        cidr_blocks = ["203.246.171.161/32"]
     }
     
 }
