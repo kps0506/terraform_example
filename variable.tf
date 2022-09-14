@@ -29,4 +29,35 @@ variable "map_example" {
     }
 }
 
+variable "object_example" {
+    description = "An example of a structural type in Terraform"
+    type        = object({
+        name    = string
+        age     = number
+        tags    = list(string)
+        enabled = bool
+    })
+    default = {
+        name    = "value1"
+        age     = 42
+        tags    = ["a", "b", "c"]
+        enabled = true
+    }
+}
+
+variable "object_example_with_error" {
+    description = "An example of a structural type in Terraform with an error"
+    type        = object ({
+        name    = string
+        age     = number
+        tags    = list(string)
+        enabled = bool
+    })
+    default = {
+        name    = "value1"
+        age     = 42
+        tags    = ["a", "b", "c"]
+        enabled = "invalid"
+    }
+}
 # object 또는 tuple 제약 조건을 사용하여 복잡한 구조적 유형(structural type)을 작성
