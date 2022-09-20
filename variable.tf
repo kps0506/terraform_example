@@ -57,7 +57,7 @@ variable "object_example_with_error" {
         name    = "value1"
         age     = 42
         tags    = ["a", "b", "c"]
-        enabled = "invalid"
+        enabled = "true"
     }
 }
 # object 또는 tuple 제약 조건을 사용하여 복잡한 구조적 유형(structural type)을 작성
